@@ -1,6 +1,6 @@
 import React from 'react'
 import './menu.css';
-import { Router } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 function Menu() {
   return (
@@ -9,12 +9,16 @@ function Menu() {
         LOGO
       </div>
       <div className='click-items'>
-        <div className='converter-item'>
-          Converter
-        </div>
-        <div className='briefcase-item'>
-          Briefcase
-        </div>
+        <Link to="/">
+          <div className='converter-item'>
+            Converter
+          </div>
+        </Link>
+        <Link to="/briefcase">
+          <div className='briefcase-item'>
+            Briefcase
+          </div>
+        </Link>
       </div>
     </div>
   )

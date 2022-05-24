@@ -3,7 +3,6 @@ import Chart from './chart/Chart';
 
 function Converter(props) {
   const currencies = props.coinsData;
-  console.log(props.chartData);
   const [valueConvertFrom, setValueConvertFrom] = useState(0);
   const [valueConvertTo, setValueConvertTo] = useState(0);
   const [selectValueFrom, setSelectValueFrom] = useState('Bitcoin');
@@ -47,6 +46,7 @@ function Converter(props) {
         }
         break;
       }
+      default: break;
     }
   }
 
@@ -109,4 +109,4 @@ function Converter(props) {
   )
 }
 
-export default Converter
+export default Converter;
