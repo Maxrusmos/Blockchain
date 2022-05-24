@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Chart from './chart/Chart';
+import './converter.css';
 
 function Converter(props) {
   const currencies = props.coinsData;
@@ -85,25 +86,30 @@ function Converter(props) {
     <>
       <div className='converter-container'>
 
-        <div className='convert-from'>
-          <input className='convertFrom-input' type="number" value={valueConvertFrom} onChange={handleChangeFrom}/>
-          <select value={selectValueFrom} onChange={handleChangeSelectFrom}>
-            <option>Bitcoin</option>
-            <option>Ethereum</option>
-            <option>USD</option>
-          </select>
+        <div className='converter-form'>
+        <h1>Converter</h1>
+          <div className='convert-from'>
+            <input className='convertFrom-input' type="number" min="0" value={valueConvertFrom} onChange={handleChangeFrom} onFocus={handleChangeFrom}/>
+            <select value={selectValueFrom} onChange={handleChangeSelectFrom}>
+              <option>Bitcoin</option>
+              <option>Ethereum</option>
+              <option>USD</option>
+            </select>
+          </div>
+          <div className='convert-to'>
+            <input className='convertFrom-input' type="number" min="0" value={valueConvertTo}/>
+            <select value={selectValueTo} onChange={handleChangeSelectTo}>
+              <option>Bitcoin</option>
+              <option>Ethereum</option>
+              <option>USD</option>
+            </select>
+          </div>
         </div>
 
-        <div className='convert-to'>
-          <input className='convertFrom-input' type="number" value={valueConvertTo}/>
-          <select value={selectValueTo} onChange={handleChangeSelectTo}>
-            <option>Bitcoin</option>
-            <option>Ethereum</option>
-            <option>USD</option>
-          </select>
+        <div className='chart-form'>
+          <h1>Сhanges in the last 14 days</h1>
+          <Chart dataForChart={props.chartData}></Chart>
         </div>
-
-        <Chart dataForChart={props.chartData}></Chart>
       </div>
     </>
   )

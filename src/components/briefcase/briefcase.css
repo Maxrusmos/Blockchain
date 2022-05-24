@@ -1,0 +1,75 @@
+.briefcase-container {
+  padding: 30px;
+  box-sizing: border-box;
+  width: 92.5%;
+  height: calc(100vh - 70px);
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.briefcase-form, .briefcaseChart-form {
+  position: relative;
+  text-align: center;
+  margin: 30px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 750px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.chart-helper {
+  margin: 0 50px;
+}
+
+.briefcase-form h1, .briefcaseChart-form h1 {
+  text-align: center;
+  font-weight: 100;
+}
+
+.total {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.bitcoin-briefcase, .ethereum-briefcase {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.bitcoin-briefcase h2, .ethereum-briefcase h2 {
+  font-weight: 100;
+  margin: 0;
+  text-align: left;
+}
+
+.bitcoin-briefcase-input, .ethereum-briefcase-input, .bitcoin-accuracy-input, .ethereum-accuracy-input {
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  margin-right: 5px;
+  font-size: 30px;
+  padding: 0px 5px;
+}
+
+.bit-acc, .eth-acc {
+  display: flex;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+}
+

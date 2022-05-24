@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
-import { PieChart, Pie, Sector, Cell} from 'recharts';
+import { PieChart, Pie, Cell, Legend} from 'recharts';
 
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+const COLORS = ['#0088FE', '#00C49F'];
 
 const RADIAN = Math.PI / 180;
 const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
@@ -22,10 +22,9 @@ export default class BriefcaseChart extends PureComponent {
   }
 
   data = [];
-
   state = {
-    val1: +this.props.bitcoin,
-    val2: +this.props.ethereum
+    val1: 1,
+    val2: 1
   }
 
   componentDidMount() {
@@ -33,12 +32,6 @@ export default class BriefcaseChart extends PureComponent {
       { name: 'Bitcoin', value: +this.state.val1 },
       { name: 'Ethereum', value: +this.state.val2 },
     ];
-    let val1 = +this.props.bitcoin;
-    let val2 = +this.props.ethereum;
-    this.setState({
-      val1,
-      val2
-    });
   }
 
   componentDidUpdate() {
@@ -55,16 +48,16 @@ export default class BriefcaseChart extends PureComponent {
       { name: 'Bitcoin', value: +this.state.val1 },
       { name: 'Ethereum', value: +this.state.val2 },
     ];
-    console.log(this.data)
     return (
-        <PieChart width={400} height={400}>
+        <PieChart width={620} height={620}>
+        <Legend align="right" verticalAlign='middle' layout='vertical' height={36}/>
           <Pie
             data={this.data}
             cx="50%"
             cy="50%"
             labelLine={false}
             label={renderCustomizedLabel}
-            outerRadius={80}
+            outerRadius={220}
             fill="#8884d8"
             dataKey="value"
           >

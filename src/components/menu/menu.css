@@ -1,9 +1,35 @@
 .menu-container {
   display: flex;
+  height: 70px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.logo-item img {
+  border: 0.1px solid black;
+  margin: 5px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .click-items {
   width: 100%;
   display: flex;
   justify-content: space-around;
+}
+
+.click-items a {
+  transition: 0.6s;
+  text-align: center;
+  width: 100%;
+  line-height: 70px;
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
+}
+
+.click-items a:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
 }
