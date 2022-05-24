@@ -3,6 +3,7 @@ import Converter from './components/converter/Converter';
 import Menu from './components/menu/Menu';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import Briefcase from './components/briefcase/Briefcase';
 
 function App() {
   const [data, setData] = useState();
@@ -23,6 +24,7 @@ function App() {
     <div className="App">
       <Menu></Menu>
       <Converter coinsData={data} chartData={chartData}></Converter>
+      <Briefcase coinsData={data}></Briefcase>
     </div>
   );
 }

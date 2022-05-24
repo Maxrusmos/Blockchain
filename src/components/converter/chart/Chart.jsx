@@ -3,8 +3,8 @@ import { LineChart, Line, YAxis, XAxis, CartesianGrid, Tooltip, Legend } from "r
 
 
 class Chart extends React.Component {
-  state = {}
-  data = []
+  state = {};
+  data = [];
   urls = ["https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=14&interval=daily", 
           "https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=14&interval=daily",];
 
